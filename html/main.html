@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/yxh/maincss/login.css">
+    <meta charset="UTF-8">
+    <title>注册页</title>
+    <script>
+    function validate(){
+        var x = document.forms["loginform"]["name"].value;
+        var y = document.forms["loginform"]["password"].value;
+        var y1 = document.forms["loginform"]["retypepwd"].value;
+        var z = document.forms["loginform"]["email"].value;
+        var errortext =""
+
+        var result = true;
+        if (x == null || x==""){
+
+            errortext = errortext+" 名字为空\n";
+            result = false;
+        }
+         if (y == null || y==""){
+
+            errortext =errortext+" 密码为空\n";
+            result = false;
+
+        }
+        if(((y != null)&&(y1 == null))|| (y1 != y)){
+             errortext = errortext + "重写密码有误\n";
+             result = false;
+        }
+
+         if (z == null || z ==""){
+            errortext = errortext + " 邮箱为空\n";
+            result = false;
+
+        }
+        if (errortext !="") {
+
+            alert(errortext);
+        }
+        return result;
+
+    }
+
+    </script>
+</head>
+<body>
+<div class="block"> Signup
+ <div class="inside">
+     <form name="loginform" action="/yxh/php/validate.php" method="get" onsubmit="return validate()">
+     <p class="text">Username:<input type="text" name="name"></p>
+     <p class="text">Password:<input type="password" name="password"></p>
+     <p class="text">Re-enter Password：<input type="password" name ="retypepwd"></p>
+     <p class="text">Email:<input type="email" name="email"></p>
+     <div>
+     <button type="submit" class="button" name="submit">Signup</button>
+
+     </div>
+     </form>
+ </div>
+</div>
+</body>
+</html>

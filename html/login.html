@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/yxh/maincss/login.css">
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <script>
+        function validate(){
+            var x =document.forms["denglu"]["name"].value;
+            var y =document.forms["denglu"]["password"].value;
+            var z =document.forms["denglu"]["email"].value;
+            var result = true
+            var errortext = "";
+            if (x == null|| x =="")
+            {
+                errortext = errortext + "name is empty\n";
+                result = false;
+            }
+            if(y == null || y =="")
+            {
+                errortext = errortext + "password is empty\n";
+                result = false;
+            }
+            if(z == null || z =="")
+            {
+                errortext = errortext + "email is empty\n";
+                result = false;
+            }
+            if(errortext != null ||errortext != ""){
+                alert(errortext);
+            }
+            return result;
+
+        }
+    </script>
+</head>
+<body>
+ <div class = "block">welcom
+     <div class = "inside">
+         <form name="denglu" action="/yxh/php/validatelogi.php" method="get" onsubmit="return validate()">
+             <p class="text">Username:<input type ="text" name="name"></p>
+             <p class="text">Password：<input type="text" name="password"></p>
+             <p class="text">Email：<input type="text" name="email"></p>
+             <div>
+                 <button type="submit" class="button" name="submit">log in</button>
+                 <button type="button" class="button" onclick="window.location.href='main.html'" >sign up</button>
+             </div>
+         </form>
+     </div>
+ </div>
+</body>
+</html>

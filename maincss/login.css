@@ -1,0 +1,39 @@
+.block{
+
+    width:400px;
+    height:400px;
+    margin:200px auto;
+    background-color:aqua;
+    padding: 50px;
+    text-align: center;
+}
+.inside{
+    margin: 10px auto;
+    text-align: center;
+    font-family: Microsoft YaHei;/*问题*字体*/
+    font-size: 50px;
+}
+p.text,p.lasttext{
+    margin: 40px auto 50px;
+    font-family: Microsoft YaHei;
+    font-size: large;
+    padding-bot: 50px;
+    background-color: yellow;
+}
+p.lasttext{
+    margin-bottom: 20px;
+}
+.button{
+    background-color: #4CAF50;
+    border:black;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+
+}
